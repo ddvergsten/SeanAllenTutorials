@@ -21,14 +21,18 @@ class ViewController: UIViewController {
         gestureRecognizer.numberOfTapsRequired = 1
         gestureRecognizer.numberOfTouchesRequired = 1
          
-        myView.addGestureRecognizer(gestureRecognizer)
+        view.addGestureRecognizer(gestureRecognizer)
+        //myView.addGestureRecognizer(gestureRecognizer)
         myView.isUserInteractionEnabled = true
+        self.view.isUserInteractionEnabled = true
         
     }
 
 
     @objc func gestureFired(blah gesture:UITapGestureRecognizer){
-        print("gesture fired")
+        let touchPoint = gesture.location(in: self.view)
+        
+        print("gesture fired at x:\(touchPoint.x) y:\(touchPoint.y)")
     }
 }
 
