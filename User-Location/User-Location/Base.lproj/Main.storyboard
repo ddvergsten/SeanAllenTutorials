@@ -17,31 +17,57 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="oPm-rI-QyS">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
                                 <connections>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="1U3-cw-eFl"/>
                                 </connections>
                             </mapView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pinred" translatesAutoresizingMaskIntoConstraints="NO" id="66n-eu-umj">
+                                <rect key="frame" x="187" y="408" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="NZt-uv-mdB"/>
+                                    <constraint firstAttribute="height" constant="40" id="oDd-X5-AQV"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NcX-bg-Ghj">
+                                <rect key="frame" x="0.0" y="812" width="414" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="0Zm-Dp-fUj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="oPm-rI-QyS" secondAttribute="bottom" id="05O-nO-aP7"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oPm-rI-QyS" secondAttribute="trailing" id="BKe-8Y-L6T"/>
-                            <constraint firstItem="oPm-rI-QyS" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="D5h-8s-JFO"/>
                             <constraint firstItem="oPm-rI-QyS" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="F6Q-Kd-gBZ"/>
+                            <constraint firstItem="NcX-bg-Ghj" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="FZ2-fV-MDk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="NcX-bg-Ghj" secondAttribute="bottom" id="Jpv-2s-wkk"/>
                             <constraint firstItem="oPm-rI-QyS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="RQ4-B4-oZD"/>
+                            <constraint firstItem="NcX-bg-Ghj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="he8-Ia-VrZ"/>
+                            <constraint firstItem="66n-eu-umj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kOL-y3-WpF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="oPm-rI-QyS" secondAttribute="bottom" id="lrP-UD-0hi"/>
+                            <constraint firstItem="66n-eu-umj" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-20" id="mY0-NS-axZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NcX-bg-Ghj" secondAttribute="trailing" id="uUs-XS-4hW"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="addressLabel" destination="NcX-bg-Ghj" id="TGX-Ah-KPZ"/>
                         <outlet property="mapView" destination="oPm-rI-QyS" id="cTd-8n-5Z9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="20" y="94"/>
+            <point key="canvasLocation" x="18.840579710144929" y="93.75"/>
         </scene>
     </scenes>
     <resources>
+        <image name="pinred" width="64" height="64"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
